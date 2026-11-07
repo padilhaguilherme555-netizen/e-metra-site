@@ -1,0 +1,34 @@
+/* E-METRA v7 — opening, meaning and conversion */
+.brand-stage.active{opacity:1!important}
+.brand-stage.is-light{opacity:.18!important}
+.brand-stage:not(.is-light) .brand-form{filter:brightness(0) invert(1) drop-shadow(0 16px 34px rgba(39,103,190,.18))}
+.brand-stage.is-light .brand-form{filter:brightness(0)!important}
+/* There is one logo source only. Remove static duplicates from the showcase. */
+.hero-mark-space:before{content:none!important;display:none!important}
+.hero .hero-icon,.hero-icon-fallback{display:none!important}
+.hero-mark-space{background:radial-gradient(ellipse at center,rgba(61,114,184,.20),rgba(7,17,32,.04) 65%);box-shadow:inset 0 0 42px #040c1c35;min-height:390px}
+.hero-mark-space:after{inset:26px;border-radius:12px;border:1px solid #87b5fa13}
+.hero-showcase{min-height:610px}
+.hero-shell{align-items:center}
+.hero-copy{align-self:center}
+.hero-copy h1{font-size:clamp(36px,3.5vw,58px)}
+.hero-copy .eyebrow{color:#a9cffc}
+.hero-showcase-footer{z-index:16}
+.origin-story{background:#f6f8fb;color:#101d30;padding:130px 0;position:relative;overflow:hidden}
+.origin-story:before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,#ffffff 12%,#eef3fa 100%)}
+.origin-layout{display:grid;grid-template-columns:minmax(0,.93fr) minmax(0,1fr);gap:clamp(35px,7vw,120px);align-items:center}
+.origin-title .eyebrow{color:#355f91}.origin-title .eyebrow:before{background:#355f91}
+.origin-title .section-head{max-width:540px;color:#101d30}.origin-title .section-head span{color:#345e91}
+.origin-hebrew{font-family:Georgia,serif;font-size:clamp(95px,14vw,180px);line-height:1;margin:30px 0 8px;letter-spacing:0;color:#0b1b2d}
+.origin-etymology{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#526982}.origin-etymology span{padding:0 8px;color:#8aa2ba}
+.origin-body{max-width:620px}.origin-body>p{font-size:16px;line-height:1.9;color:#4a5c70}.origin-body .origin-lead{font:500 clamp(23px,2.15vw,32px)/1.43 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:#172942}
+.origin-body .origin-lead strong{color:#235d99}.origin-verse{margin:32px 0 25px;padding:22px 25px;border-left:3px solid #2a598b;background:#e8eff7;border-radius:0 9px 9px 0}
+.origin-verse p{font:500 18px/1.6 'Space Grotesk';margin:0 0 12px;color:#213c5b}.origin-verse cite{font:500 11px 'JetBrains Mono';font-style:normal;letter-spacing:.08em;color:#516b89}
+.origin-link{display:inline-flex;gap:18px;align-items:center;font-size:13px;font-weight:700;color:#1c4d84;border-bottom:1px solid #8da9c7;padding-bottom:8px}
+.value-section{background:#080e18;padding:145px 0 125px}.value-intro{display:grid;grid-template-columns:1fr .65fr;gap:38px;align-items:end;margin-bottom:52px}.value-intro .section-head{margin-bottom:0}.value-intro .section-head span{color:#83b2ed}.value-intro p{margin-bottom:0}
+.value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.value-grid article{padding:34px 30px 42px;background:#101a2a;border:1px solid #2c3a51;border-radius:10px;min-height:260px}
+.value-num{font:500 12px 'JetBrains Mono';color:#82afe9}.value-grid h3{font:500 clamp(23px,2.1vw,30px)/1.18 'Space Grotesk';letter-spacing:-.035em;margin:34px 0 15px}.value-grid p{color:#a3b3c8;line-height:1.8;font-size:14px}
+.value-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:30px;border:1px solid #34506d;border-radius:10px;background:linear-gradient(110deg,#122845,#0d1828);padding:27px 30px}.value-cta div{display:grid;gap:8px}.value-cta strong{font:500 22px 'Space Grotesk'}.value-cta span{color:#a9b8cb;font-size:14px}
+@media(max-width:940px){.origin-layout,.value-intro{grid-template-columns:1fr}.origin-story{padding:95px 0}.value-grid{grid-template-columns:1fr 1fr}.hero-showcase{min-height:520px}}
+@media(max-width:720px){.hero-mark-space{min-height:300px}.hero-showcase{min-height:450px}.brand-stage.active{opacity:.95!important}.origin-story{padding:70px 0}.origin-hebrew{font-size:110px}.value-section{padding:90px 0}.value-grid{grid-template-columns:1fr}.value-cta{flex-direction:column;align-items:stretch}.value-cta .btn{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.brand-stage{display:none!important}.hero-mark-space:before{content:''!important;display:block!important;position:absolute;inset:45px;background:url('assets/em-cropped.png') center/contain no-repeat;filter:brightness(0) invert(1);opacity:1}}

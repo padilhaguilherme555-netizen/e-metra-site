@@ -1,0 +1,22 @@
+
+/* E-METRA • Brand Journey 3.0 — fragmentos visíveis sobre toda a página */
+#brandCanvas{display:none!important}
+body.motion-ready .hero .hero-icon{opacity:0!important}
+body.motion-ready .brand-morph .full,body.motion-ready .brand-morph .frags,body.motion-ready .journey-logo{opacity:0!important;visibility:hidden!important}
+.brand-stage{position:fixed;left:0;top:0;width:1px;height:1px;z-index:38;pointer-events:none;overflow:visible;contain:layout style;opacity:0;transition:opacity .3s}
+.brand-stage.active{opacity:1}
+.brand-form{position:absolute;left:0;top:0;transform:translate(-50%,-50%);transform-origin:center;will-change:width,height,transform,opacity;pointer-events:none}
+.brand-tile{position:absolute;inset:0;background-repeat:no-repeat;background-position:center;background-size:100% 100%;will-change:transform,opacity;transform-origin:center;backface-visibility:hidden}
+.brand-solid{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;will-change:opacity;filter:drop-shadow(0 8px 26px rgba(87,153,246,.29))}
+.brand-form.brand-em .brand-tile{background-image:url('assets/em-cropped.png')}
+.brand-form.brand-word .brand-tile{background-image:url('assets/word-cropped.png')}
+.brand-form.brand-em .brand-solid{content:url('assets/em-cropped.png')}
+.brand-form.brand-word .brand-solid{content:url('assets/word-cropped.png')}
+.brand-tile{filter:drop-shadow(0 1px 4px rgba(100,169,255,.25))}
+.brand-stage:after{content:'';width:500px;height:500px;position:absolute;left:0;top:0;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(35,103,192,.095),transparent 65%);pointer-events:none}
+.word-reveal .motion-word{display:inline-block;opacity:0;transform:translateY(.85em);filter:blur(5px);transition:opacity .65s,transform .9s cubic-bezier(.15,1,.3,1),filter .85s;transition-delay:calc(var(--word-index,0)*54ms)}
+.word-reveal.words-visible .motion-word{opacity:1;transform:translateY(0);filter:blur(0)}
+.motion-enter{opacity:0;transform:translateY(48px);filter:blur(5px);transition:opacity .9s,transform 1s cubic-bezier(.15,1,.3,1),filter 1s;transition-delay:var(--enter-delay,0ms)}
+.motion-enter.motion-entered{opacity:1;transform:translateY(0);filter:blur(0)}
+@media(max-width:720px){.brand-stage{z-index:15}.brand-tile{filter:none}}
+@media(prefers-reduced-motion:reduce){.brand-stage{display:none!important}.hero .hero-icon{opacity:1!important}.brand-morph .full{opacity:1!important;visibility:visible!important;transform:none!important}.word-reveal .motion-word,.motion-enter{opacity:1!important;filter:none!important;transform:none!important;transition:none!important}}

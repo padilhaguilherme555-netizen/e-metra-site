@@ -1,0 +1,66 @@
+/* E-METRA 4.0 — light chapters, quiet motion and professional finishing */
+:root{--paper:#f7f9fc;--paper-ink:#071629;--paper-muted:#526176}
+body{background:#05080e}
+/* Brand lives behind the actual information, while still visible over chapter backgrounds. */
+.brand-stage{z-index:7!important;mix-blend-mode:normal;filter:none;transition:opacity .24s}
+.brand-stage.is-light .brand-form{filter:brightness(0) saturate(0)}
+.brand-stage.is-light .brand-tile,.brand-stage.is-light .brand-solid{filter:none}
+.brand-stage .brand-form{transition:filter .35s}
+.brand-stage .brand-form{isolation:isolate}
+/* Ensure all content stays legible and interactive above the large background mark */
+main section{position:relative;isolation:isolate}
+main section>.wrap,main section>.hero-center{position:relative;z-index:15}
+main section .wrap .wrap{z-index:15}
+.hero .hero-center{z-index:15}
+.intro .big-word{opacity:.18}
+/* Sections with a refined editorial light treatment */
+.services{background:var(--paper)!important;color:var(--paper-ink);padding:155px 0 160px}
+.process{background:#ffffff!important;color:var(--paper-ink);padding:155px 0}
+.services .eyebrow,.process .eyebrow{color:#37628f}
+.services .eyebrow:before,.process .eyebrow:before{background:#37628f}
+.services .muted,.services .service p,.process .step p{color:var(--paper-muted)}
+.services .section-head,.process .section-head{color:#0a172b}
+.services .section-head span{color:#2b598c!important}
+.service-grid{border-color:#c7d2df}
+.service{border-color:#c7d2df;min-height:310px;background:rgba(255,255,255,.58);backdrop-filter:blur(5px);transition:background .35s,box-shadow .35s,transform .35s}
+.service:hover{background:#fff;box-shadow:0 17px 35px #142b4214;transform:translateY(-4px)}
+.service .number{color:#4676a9}.service .symbol{color:#52749b}
+.steps{border-color:#bbcbdc}.step:before{background:#2c5e94;box-shadow:0 0 0 5px #dce7f2}
+.step h3{color:#0c1a2f}.process .step .eyebrow{color:#37628f}
+/* White chapter separators, high-end editorial pacing */
+.services:before,.process:before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,#fff0 45%,#c6d9ea13 90%)}
+.code-section,.work,.founder,.contact{position:relative}
+.work{background:linear-gradient(#08111e,#10223a 48%,#080e18)}
+.project-card{border-color:#425878;background:radial-gradient(circle at 75% 30%,#1e4265,#101a2a 63%);box-shadow:0 25px 70px #0004}
+.contact{background:radial-gradient(ellipse at 50% 90%,#142c48,#05080e 75%)}
+/* Sitewide polish */
+header{gap:23px;height:82px}
+header.scrolled{background:rgba(5,9,17,.94)}
+nav{gap:23px;margin-left:auto}
+nav a{font-weight:600;letter-spacing:.01em}
+.header-social{display:flex;align-items:center;gap:6px;border-left:1px solid #ffffff29;padding-left:16px}
+.social-link{display:inline-flex;align-items:center;gap:7px;padding:9px 10px;color:#b9c9df;border-radius:6px;transition:color .2s,background .2s}
+.social-link:hover{background:#15273d;color:#fff}
+.social-link svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.social-link svg .social-fill{fill:currentColor;stroke:none}
+.social-link span{font:600 11px 'DM Sans',sans-serif}
+.brand span{font-size:18px;letter-spacing:-.035em}
+.nav-cta{background:#f0f5fc;color:#0c1a2c!important;border-color:#f0f5fc;font-weight:700}
+.nav-cta:hover{background:#fff}
+.hero h1{max-width:800px}
+.hero-center p{max-width:530px;line-height:1.8}
+.intro .inner{gap:8vw}
+.brand-morph{min-height:320px}
+/* Make reading blocks visually distinct from animation */
+.workspace,.project-card,.contact-form{position:relative;z-index:17}
+.service-grid,.steps{position:relative;z-index:17}
+.founder-text{z-index:18}
+.founder-photo{z-index:17}
+footer{position:relative;z-index:21}
+footer .footer-links{flex-wrap:wrap}
+@media(max-width:1180px){.header-social .social-link span{display:none}.header-social{padding-left:9px}nav{gap:15px}}
+@media(max-width:900px){header{height:75px}.header-social{margin-left:auto}nav{top:75px}.header-social .social-link{padding:8px}.services,.process{padding:105px 0}.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.header-social{gap:1px}.header-social svg{width:19px;height:19px}.brand span{font-size:16px}.service-grid{grid-template-columns:1fr}.services .section-head,.process .section-head{font-size:clamp(34px,10vw,60px)}.services,.process{padding:80px 0}.service{min-height:235px}.service h3{margin-top:56px}.steps{gap:16px}}
+@media(prefers-reduced-motion:reduce){.service:hover{transform:none}}
+/* Do not isolate section stacking contexts: this keeps reading layers ABOVE the ambient mark. */
+main section{isolation:auto}

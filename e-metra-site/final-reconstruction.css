@@ -1,0 +1,11 @@
+
+/* FINAL ANCHORED RECONSTRUCTION — the symbol is built by the travelling pieces, not a second visible logo */
+.finale-em-frame{min-height:280px;position:relative;display:grid;place-items:center;overflow:visible}
+.finale-em-target{position:relative;width:min(78%,320px);aspect-ratio:830 / 533;display:block;pointer-events:none;z-index:1}
+.finale-em-target .finale-em-static{width:100%;height:100%;object-fit:fill;display:block;opacity:0;visibility:hidden}
+.finale-zone{position:relative}
+/* Keep the animated final brand over the panel's surface, but not over typography. */
+.brand-stage{z-index:12!important}
+@media(max-width:760px){.finale-em-frame{min-height:230px}.finale-em-target{width:min(74%,260px)}}
+@media(max-width:560px){.finale-em-frame{min-height:195px}.finale-em-target{width:min(72%,220px)}}
+@media(prefers-reduced-motion:reduce){.finale-em-target .finale-em-static{opacity:1;visibility:visible}}
